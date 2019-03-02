@@ -6,15 +6,23 @@
     <title>和Kamome一起背单词吧!</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css">
+</head>
+<body>
+    <div id="coreGame" class="win1st">
+        <div id="gameArea" class="win2nd">
+
+        </div>
+        <div id="inputArea" class="win2nd">
+            <div id="showTrans" class="win3rd"></div>
+            <input id="inputWord" class="win3rd" onkeydown="submitEvent(event)">
+        </div>
+    </div>
     <script src="scrips/boardControl.js"></script>
     <script src="scrips/coreGame.js"></script>
     <script src="scrips/eventBoard.js"></script>
     <script src="scrips/gameBoard.js"></script>
     <script src="scrips/mainBoard.js"></script>
     <script src="scrips/showKamome.js"></script>
-</head>
-<body>
-    <div id="coreGame"></div>
-    
+    <script src="scrips/dictionary.js"></script>
 </body>
 </html>

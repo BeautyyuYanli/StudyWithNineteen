@@ -1,0 +1,56 @@
+body{
+    position: fixed;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+.win1st{
+    position: absolute;
+    right: 2%;
+    top: 2%;
+    border: solid;
+}
+.win2nd{
+    position: absolute;
+    border: solid;
+    margin: 0 10px;
+}
+.win3rd{
+    position: absolute;
+    border: solid;
+    margin: 0 10px;
+}
+#coreGame{
+    height: 650px;
+    width: 600px;
+}
+#gameArea{
+    height: 445px;
+    width: 580px;
+    top: 10px;
+}
+#inputArea{
+    height: 165px;
+    width: 580px;
+    bottom: 10px;
+
+}
+#showTrans{
+    height: 70px;
+    width: 560px;
+    top: 10px;
+}
+#inputWord{
+    height: 60px;
+    width: 560px;
+    bottom: 10px;
+}
+.words{
+    position: absolute;
+    border: solid;
+    background-color: #FFFFFF;
+    opacity: 1;
+    top: 10px;
+    left: 0;
+
+}
