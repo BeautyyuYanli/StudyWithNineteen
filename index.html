@@ -8,21 +8,32 @@
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css">
 </head>
 <body>
-    <div id="coreGame" class="win1st">
-        <div id="gameArea" class="win2nd">
-
-        </div>
+    <div id="coreGame" class="win1st" hidden>
+        <div id="gameArea" class="win2nd"></div>
         <div id="inputArea" class="win2nd">
             <div id="showTrans" class="win3rd"></div>
             <input id="inputWord" class="win3rd" onkeydown="submitEvent(event)">
         </div>
+        <div id="gameOver" class="win2nd" hidden>
+            <div id="overTitle" class="win3rd">Game Over!</div>
+            <div id="showScore" class="win3rd"></div>
+            <div id="returnButton" class="win3rd" onclick="returnButton()">Back to Menu</div>
+        </div>
     </div>
-    <script src="scrips/boardControl.js"></script>
+    <div id="mainBoard" class="win1st" hidden>
+        <div id="showEx" class="win2nd"></div>
+        <div id="playButton" class="win2nd" onclick="playButton()">play!</div>
+        <div id="showAllScore" class="win2nd">
+            <div id="showLastScore" class="win3rd"></div>
+            <div id="showHistoryScore" class="win3rd"></div>
+        </div>
+    </div>
     <script src="scrips/coreGame.js"></script>
     <script src="scrips/eventBoard.js"></script>
     <script src="scrips/gameBoard.js"></script>
     <script src="scrips/mainBoard.js"></script>
     <script src="scrips/showKamome.js"></script>
     <script src="scrips/dictionary.js"></script>
+    <script>mainBoardCreate()</script>
 </body>
 </html>

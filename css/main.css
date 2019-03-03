@@ -9,41 +9,37 @@ body{
     right: 2%;
     top: 2%;
     border: solid;
+    width: 600px;
 }
 .win2nd{
     position: absolute;
     border: solid;
     margin: 0 10px;
+    width: 580px;
 }
 .win3rd{
-    position: absolute;
     border: solid;
-    margin: 0 10px;
+    margin: 10px 10px;
+    width: 560px;
 }
+/* gameBoard */
 #coreGame{
     height: 650px;
-    width: 600px;
 }
 #gameArea{
     height: 445px;
-    width: 580px;
     top: 10px;
 }
 #inputArea{
     height: 165px;
-    width: 580px;
     bottom: 10px;
-
 }
 #showTrans{
-    height: 70px;
-    width: 560px;
-    top: 10px;
+    height: 60px;
+    margin-bottom: 0;
 }
 #inputWord{
     height: 60px;
-    width: 560px;
-    bottom: 10px;
 }
 .words{
     position: absolute;
@@ -53,4 +49,35 @@ body{
     top: 10px;
     left: 0;
 
+}
+#gameOver{
+    top: 100px;
+}
+#overTitle{
+    height: 90px;
+}
+#showScore{
+    height: 30px;
+}
+#returnButton{
+    height: 60px;
+}
+/* mainBoard */
+#mainBoard{
+    height: 650px;
+}
+#showEx{
+    height: 250px;
+    top: 10px;
+}
+#showAllScore{
+    height: 165px;
+    bottom: 10px;
+}
+#showLastScore, #showHistoryScore{
+    height: 60px;
+}
+#playButton{
+    top: 305px;
+    height: 120px;
 }
