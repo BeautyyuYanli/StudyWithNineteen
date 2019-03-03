@@ -6,6 +6,9 @@
     <title>和Kamome一起背单词吧!</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css">
+    <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+    <script src="./jquery-3.3.1.min.js"></script>
+    <script>if (window.module) module = window.module;</script>
 </head>
 <body>
     <div id="coreGame" class="win1st" hidden>
@@ -27,6 +30,11 @@
             <div id="showLastScore" class="win3rd"></div>
             <div id="showHistoryScore" class="win3rd"></div>
         </div>
+    </div>
+    <div id="showKamome">
+        <div id="showSaid"></div>
+        <img id="showFace">
+        <img id="showBody">
     </div>
     <script src="scrips/coreGame.js"></script>
     <script src="scrips/eventBoard.js"></script>

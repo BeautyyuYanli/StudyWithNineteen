@@ -11,6 +11,8 @@ function mainBoardCreate(_num = lastScore){
     historyScoreElement.innerHTML = "the max score in history: " + historyScore;
     lastScoreElement.innerHTML = "the score last game: " + lastScore;
     mainBoard.hidden = false;
+    changeBody(clothesId, "01");
+    changeFace("01", "01");
 }
 function mainBoardDelete(){
     mainBoard.hidden = true;

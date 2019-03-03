@@ -31,6 +31,7 @@ function gameBoardCreate(maxWords, dieTime){
     transElement.innerHTML = "";
     overElement.hidden = true;
     gameBoard.hidden = false;
+    inputElement.focus();
     let al = setInterval(() => {gameStart(maxWords, dieTime);clearInterval(al)}, 1000);
 }
 function gameBoardDelete(){

@@ -8,7 +8,7 @@ for (let i = 0; i < 15; ++ i){
     wordElements[i].setAttribute("hidden", "true");
     gameArea.appendChild(wordElements[i]);
     words[i] = {
-        x: 0, y: 0, alpha: 0, index: i, ifLive: false, wordElement: wordElements[i], wordContent: 0,
+        x: 0, y: 0, alpha: 0, ifLive: false, wordElement: wordElements[i], wordContent: 0,
         liveTimer: 0,
         delete: function (){
             this.ifLive = false;
