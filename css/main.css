@@ -1,26 +1,35 @@
 body{
-    position: fixed;
+    overflow: hidden;
     margin: 0;
     height: 100%;
     width: 100%;
 }
+#backgroundBoard{
+    position: relative;
+    height: 695px;
+    width: 1080px;
+    padding: 0;
+}
 .win1st{
     position: absolute;
-    left: 2%;
-    top: 2%;
+    left: 20px;
+    bottom: 20px;
     border: solid;
     width: 600px;
 }
 .win2nd{
     position: absolute;
-    border: solid;
     margin: 0 10px;
     width: 580px;
 }
 .win3rd{
     border: solid;
+    margin: 10px 0;
+    width: 580px;
+}
+.buttons{
+    border: solid;
     margin: 10px 10px;
-    width: 560px;
 }
 /* gameBoard */
 #coreGame{
@@ -60,6 +69,7 @@ body{
     height: 30px;
 }
 #returnButton{
+    width: 560px;
     height: 60px;
 }
 /* mainBoard */
@@ -70,6 +80,29 @@ body{
     height: 250px;
     top: 10px;
 }
+#showLevel{
+    height: 50px;
+}
+#showTotleEx{
+    height: 50px;
+}
+#showUnlockedEvents{ 
+    height: 95px;
+}
+#showUnlockedEvents p{
+    height: 20px;
+    margin: 5px;
+}
+.eventsIcon{
+    display: inline-block;
+    border: solid;
+    border-radius: 50px;
+    height: 50px;
+    width: 50px;
+    font-size: 40px;
+    text-align: center;
+    margin: 5px;
+}
 #showAllScore{
     height: 165px;
     bottom: 10px;
@@ -78,15 +111,31 @@ body{
     height: 60px;
 }
 #playButton{
+    position: absolute;
     top: 305px;
-    height: 120px;
+    height: 100px;
+    width: 300px;
+}
+#helpButton{
+    position: absolute;
+    top: 305px;
+    left: 315px;
+    height: 100px;
+    width: 125px;
+}
+#importButton{
+    position: absolute;
+    top: 305px;
+    left: 455px;
+    height: 100px;
+    width: 125px;
 }
 /* show Kamome */
 #showBody{
     position: absolute;
     z-index: 998;
     height: 550px;
-    bottom: -30px;
+    bottom: -20px;
     left: 45px;
 }
 #showFace{
@@ -105,7 +154,16 @@ body{
     position: absolute;
     height: 650px;
     width: 400px;
+    right: 20px;
+    bottom: 20px;
+}
+/* show event */
+#showEvent{
+    position: absolute;
+    bottom: 4%;
+    left: 8%;
+    height: 200px;
+    width: 800px;
     border: solid;
-    right: 2%;
-    top: 2%;
+    z-index: 9999;
 }
