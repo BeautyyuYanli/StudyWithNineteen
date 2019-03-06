@@ -13,11 +13,9 @@ function submitEvent(e){
     }
 }
 function showTrans(_word){
-    console.log(_word);
     transElement.innerHTML = _word;
 }
 function showGameOver(){
-    console.log("game over" + score);
     overElement.hidden = false;
     totleScoreElement.innerHTML = "your score this time: " + score;
 }

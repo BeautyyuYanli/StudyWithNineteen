@@ -1,5 +1,6 @@
 var sentenceCnt, eventIndex, eventElement = $("#showEvent");
 function eventBoardCreate(_num){
+    $("#backgroundBoard").css("background-image",'url("../pics/backgrounds/" + _num + ".png")');
     mainBoardDelete();
     if (_num > events.length){
         mainBoardCreate();
@@ -7,12 +8,14 @@ function eventBoardCreate(_num){
     }
     eventIndex = _num - 1;
     sentenceCnt = 0;
+    saidElement.fadeOut(300);
     eventElement.fadeIn(300);
     eventElement.empty();
     sentenceCnt = -1;
     nextSentence();
 }
 function eventBoardDelete(){
+    saidElement.fadeIn(300);
     eventElement.fadeOut(300);
     $("#showKamome").css("opacity", 1);
     mainBoardCreate();

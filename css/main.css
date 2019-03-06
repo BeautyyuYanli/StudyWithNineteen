@@ -5,6 +5,7 @@ body{
     width: 100%;
 }
 #backgroundBoard{
+    background-image: url("../pics/backgrounds/1.png");
     position: relative;
     height: 695px;
     width: 1080px;
