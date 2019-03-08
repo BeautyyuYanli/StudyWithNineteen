@@ -22,28 +22,50 @@
             <div id="gameOver" class="win2nd" hidden>
                 <div id="overTitle" class="win3rd">Game Over!</div>
                 <div id="showScore" class="win3rd"></div>
-                <div id="returnButton" class="buttons" onclick="returnButton()">Back to Menu</div>
+                <div id="returnButton" class="buttons" onclick="returnButton()">返回主页</div>
             </div>
         </div>
         <div id="mainBoard" class="win1st" hidden>
-            <div id="showEx" class="win2nd">
-                <div id="showLevel" class="win3rd"></div>
-                <div id="showTotleEx" class="win3rd"></div>
-                <div id="showUnlockedEvents" class="win3rd"></div>
-            </div>
-            <div id="playButton" class="buttons" onclick="playButton()">play!</div>
-            <div id="helpButton" class="buttons" onclick="showHelp()">help!</div>
-            <div id="importButton" class="buttons" onclick="showImport()">import!</div>
-            <div id="showAllScore" class="win2nd">
-                <div id="showLastScore" class="win3rd"></div>
-                <div id="showHistoryScore" class="win3rd"></div>
+            <div id="front">
+                <div id="showLevel" class="_win3rd">
+                    <p class="secondaryWord colorDark">等级Level:</p>
+                    <p class="primaryWord colorDark"></p>
+                </div>
+                <div id="showTotleEx" class="_win3rd">
+                    <p class="secondaryWord colorDark">熟练度Ex:</p>
+                    <p class="primaryWord colorDark"></p>
+                </div>
+                <div id="showUnlockedEvents" class="_win3rd">
+                    <p class='secondaryWord colorDark'>已解锁的剧情事件:</p>
+                    <div id="eventIcons"></div>
+                </div>
+                <div id="mainBoardButtons">
+                    <div id="playButton" class="buttons" onclick="playButton()">开始游戏!</div>
+                    <div id="helpButton" class="buttons" onclick="showHelp()">说明!</div>
+                    <div id="importButton" class="buttons" onclick="showImport()">存档!</div>
+                </div>
+                <div id="showLastScore" class="_win3rd">
+                    <p class="secondaryWord colorLight">上次游戏成绩:</p>
+                    <p class="primaryWord colorLight"></p>
+                </div>
+                <div id="showHistoryScore" class="_win3rd">
+                    <p class="secondaryWord colorLight">历史最高成绩:</p>
+                    <p class="primaryWord colorLight"></p>
+                </div>
             </div>
         </div>
-        <div id="showEvent" onclick="nextSentence()" hidden></div>
-        <div id="showKamome">
-            <div id="showSaid"></div>
+        <div id="showEvent" onclick="nextSentence()" hidden>
+            <p id="speaker">a</p>
+            <p id="speakWords">a</p>
+        </div>
+        <div id="showSaid"></div>
+        <div id="showKamome" class="Kamome">
             <img id="showFace">
             <img id="showBody">
+        </div>
+        <div id="showKamomeBack" class="Kamome" hidden>
+            <img id="showFaceBack">
+            <img id="showBodyBack">
         </div>
     </div>
     <script src="scrips/coreGame.js"></script>

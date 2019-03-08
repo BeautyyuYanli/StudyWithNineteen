@@ -17,7 +17,7 @@ function showTrans(_word){
 }
 function showGameOver(){
     overElement.hidden = false;
-    totleScoreElement.innerHTML = "your score this time: " + score;
+    totleScoreElement.innerHTML = "本次成绩: " + score;
 }
 function showScore(_num){
     onceScore = _num;

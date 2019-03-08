@@ -1,4 +1,4 @@
-var sentenceCnt, eventIndex, eventElement = $("#showEvent");
+var sentenceCnt, eventIndex, eventElement = $("#showEvent"), speakerWordElement = $("#speakWords"), speakerElement = $("#speaker");
 function eventBoardCreate(_num){
     $("#backgroundBoard").css("background-image",'url("../pics/backgrounds/" + _num + ".png")');
     mainBoardDelete();
@@ -8,16 +8,16 @@ function eventBoardCreate(_num){
     }
     eventIndex = _num - 1;
     sentenceCnt = 0;
-    saidElement.fadeOut(300);
-    eventElement.fadeIn(300);
-    eventElement.empty();
+    saidElement.fadeOut(200);
+    speakerElement.html("");
+    speakerWordElement.html("");
+    eventElement.fadeIn(200);
     sentenceCnt = -1;
     nextSentence();
 }
 function eventBoardDelete(){
-    saidElement.fadeIn(300);
-    eventElement.fadeOut(300);
-    $("#showKamome").css("opacity", 1);
+    saidElement.fadeIn(200);
+    eventElement.fadeOut(200);
     mainBoardCreate();
 }
 function nextSentence(){
@@ -25,14 +25,16 @@ function nextSentence(){
         eventBoardDelete();
         return ;
     }
-    eventElement.html(events[eventIndex][sentenceCnt].sentence);
+    speakerWordElement.html(events[eventIndex][sentenceCnt].sentence);
+    if(events[eventIndex][sentenceCnt].speaker == 0)
+        speakerElement.html("Kamome:");
+    else
+        speakerElement.html("我:");
     if (events[eventIndex][sentenceCnt].speaker == 0){
-        $("#showKamome").css("opacity", 1);
-        changeBody(events[eventIndex][sentenceCnt].clothes, events[eventIndex][sentenceCnt].action);
-        changeFace(events[eventIndex][sentenceCnt].action, events[eventIndex][sentenceCnt].face);
+        changeKamome(events[eventIndex][sentenceCnt].clothes, events[eventIndex][sentenceCnt].action, events[eventIndex][sentenceCnt].face);
     }
     else{
-        $("#showKamome").css("opacity", 0.5);
+        $("#showKamome").fadeTo(200, 0.5);
     }
 }
 var events = [
