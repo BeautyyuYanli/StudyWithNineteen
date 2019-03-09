@@ -17,7 +17,11 @@
             <div id="gameArea" class="win2nd"></div>
             <div id="inputArea" class="win2nd">
                 <div id="showTrans" class="win3rd"></div>
-                <input id="inputWord" class="win3rd" onkeydown="submitEvent(event)">
+                <div id="showHandle" class="win3rd">
+                    <div id="exitGame" class="buttons" onclick="exitGame()"><img src="./pics/icons/baseline_arrow_back_white_48dp.png"></div>
+                    <input id="inputWord" onkeydown="submitEvent(event)">
+                    <div id="checkAnswer" class="buttons" onclick="submitWord(inputElement.value);inputElement.value='';"><img src="./pics/icons/baseline_check_white_48dp.png"></div>
+                </div>
             </div>
             <div id="gameOver" class="win2nd" hidden>
                 <div id="overTitle" class="win3rd">Game Over!</div>
@@ -40,6 +44,10 @@
                     <div id="eventIcons"></div>
                 </div>
                 <div id="mainBoardButtons">
+                    <div id="hardModeButton" class="buttons" onclick="playButton(1)">
+                        <img src="./pics/icons/baseline_gamepad_white_48dp.png" class="icons">
+                        <div>挑战!</div>
+                    </div>
                     <div id="playButton" class="buttons" onclick="playButton()">
                         <img src="./pics/icons/baseline_send_white_48dp.png" class="icons">
                         <div>开始游戏!</div>

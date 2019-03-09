@@ -1,4 +1,4 @@
-var score, alarm, gameTimer, wordCreator;
+var score, alarm, gameTimer, wordCreator, ifHardMode;
 var wordElements = [], gameArea = document.getElementById("gameArea");
 var words = [];
 
@@ -20,15 +20,19 @@ for (let i = 0; i < 15; ++ i){
             this.ifLive = true;
             this.liveTimer = setInterval(() => {
                 this.delete();
+                missWord();
             },dieTime * 1000);
-            // set attrubutes
-            this.wordContent = randWord();
-            this.wordElement.innerHTML = this.wordContent.word;
-            this.wordElement.style.top = (this.x = Math.floor(Math.random() * 1000) % 425) + "px";
-            this.wordElement.style.left = (this.y = Math.floor(Math.random() * 1000) % 550) + "px";
-            this.wordElement.style.opacity = (this.alpha = 1);
             // show the element
             this.wordElement.hidden = false;
+            // set attrubutes
+            this.wordContent = randWord();
+            if (ifHardMode)
+                this.wordElement.innerHTML = this.wordContent.trans;
+            else
+                this.wordElement.innerHTML = this.wordContent.word;
+            this.wordElement.style.top = (this.x = (Math.floor(Math.random() * 1000)) % (460 - 35)) + "px";
+            this.wordElement.style.left = (this.y = (Math.floor(Math.random() * 1000)) % (580 - this.wordElement.offsetWidth)) + "px";
+            this.wordElement.style.opacity = (this.alpha = 1);
         },
     };
 }
@@ -51,9 +55,13 @@ function submitWord(_word){
         matchWord.delete();
     }
 }
-function gameStart(maxWords, dieTime){
+function missWord(){
+    score += 50;
+    showScore(-50);
+}
+function gameStart(maxWords, dieTime, hardMode){
     //initialization
-    alarm = 30000;score = 0;
+    alarm = 30000;score = 0;ifHardMode = hardMode;
     gameTimer = setInterval(() => {
         for (let i in words){
             if (words[i].ifLive){
@@ -91,5 +99,7 @@ function gameOver(){
     for (let i in words){
         words[i].delete();
     }
+    if (ifHardMode)
+        score *= 2;
     showGameOver();
 }

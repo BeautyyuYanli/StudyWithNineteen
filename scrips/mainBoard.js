@@ -7,9 +7,9 @@ function Base64Decode(str, encoding = 'utf-8') {
     var bytes = base64js.toByteArray(str);
     return new (TextDecoder || TextDecoderLite)(encoding).decode(bytes);
 }
-function playButton(){
+function playButton(hardMode = 0){
     mainBoardDelete();
-    gameBoardCreate(5, 10 - level);
+    gameBoardCreate(5, 10 - level, hardMode);
 }
 function _import(){
     let code = document.getElementById("importCode").value;
@@ -31,6 +31,7 @@ function showHelp(){
 }
 function mainBoardCreate(_num = lastScore){
     // update level
+    exValue = Math.max(exValue, 0);
     level = Math.floor(exValue / 1000) + 1;
     level = Math.min(level, 6);
     $("#showLevel .primaryWord").html(level);

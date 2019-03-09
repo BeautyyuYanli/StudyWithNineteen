@@ -1,5 +1,5 @@
-var gameBoard = document.getElementById("coreGame"), inputElement = document.getElementById("inputWord"), alarmElement, scoreElement, 
-    transElement = document.getElementById("showTrans"), overElement = document.getElementById("gameOver"), totleScoreElement = document.getElementById("showScore");
+var gameBoard = $("#coreGame"), inputElement = document.getElementById("inputWord"), alarmElement, scoreElement, 
+    transElement = document.getElementById("showTrans"), overElement = $("#gameOver"), totleScoreElement = document.getElementById("showScore");
 var onceScore, cntAlarm, evaluation;
 function submitEvent(e){
     let keynum;
@@ -16,34 +16,44 @@ function showTrans(_word){
     transElement.innerHTML = _word;
 }
 function showGameOver(){
-    overElement.hidden = false;
+    overElement.fadeIn(200);
     totleScoreElement.innerHTML = "本次成绩: " + score;
 }
 function showScore(_num){
     onceScore = _num;
-    if (onceScore >= 60)
+    if (onceScore >= 70){
         evaluation = "很好呦!";
-    else if (onceScore >= 30)
+        changeKamome(clothesId, "03", "02");
+    }
+    else if (onceScore >= 40){
         evaluation = "不错嘛!";
-    else
+        changeKamome(clothesId, "03", "04");
+    }
+    else if (onceScore >= 0){
         evaluation = "还行...";
-    changeSaid("倒计时 -" + cntAlarm + "s<br>总分: " + (score - onceScore) + " +" + onceScore + "<br>" + evaluation);
+        changeKamome(clothesId, "01", "13");
+    }
+    else{
+        evaluation = "啊!错过了!";
+        changeKamome(clothesId, "01", "12");
+    }
+    changeSaid("倒计时 -" + cntAlarm + "s<br>总分: " + (score - onceScore) + " and " + onceScore + "<br>" + evaluation);
 }
 function showAlarm(_num){
     cntAlarm = _num;
-    changeSaid("倒计时 -" + cntAlarm + "s<br>总分: " + (score - onceScore) + " +" + onceScore + "<br>" + evaluation);
+    changeSaid("倒计时 -" + cntAlarm + "s<br>总分: " + (score - onceScore) + " and " + onceScore + "<br>" + evaluation);
 }
-function gameBoardCreate(maxWords, dieTime){
+function gameBoardCreate(maxWords, dieTime, hardMode){
     inputElement.value = "";
     transElement.innerHTML = "";
-    overElement.hidden = true;
-    gameBoard.hidden = false;
-    changeSaid("倒计时 -" + (cntAlarm = 30) + "s<br>总分: " + ((score = 0) - (onceScore = 0)) + " +" + onceScore + "<br>" + (evaluation = ""));
+    overElement.fadeOut(200);
+    gameBoard.fadeIn(200);
+    changeSaid("倒计时 -" + (cntAlarm = 30) + "s<br>总分: " + ((score = 0) - (onceScore = 0)) + " and " + onceScore + "<br>" + (evaluation = ""));
     inputElement.focus();
-    let al = setInterval(() => {gameStart(maxWords, dieTime);clearInterval(al)}, 1000);
+    let al = setInterval(() => {gameStart(maxWords, dieTime, hardMode);clearInterval(al)}, 1000);
 }
 function gameBoardDelete(){
-    gameBoard.hidden = true;
+    gameBoard.fadeOut(200);
     exValue += score;
 }
 function returnButton(){
@@ -54,4 +64,8 @@ function returnButton(){
     }
     else
         mainBoardCreate(score);
+}
+function exitGame(){
+    score = 0;
+    gameOver();
 }

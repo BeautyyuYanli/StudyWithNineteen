@@ -43,6 +43,7 @@ var events = [
         {sentence: "faqqqq!", speaker: 1, face: 0, clothes: 0, action: 0},
         {sentence: "qaqqqq!", speaker: 0, face: "02", clothes: "02", action: "02"},
         {sentence: "qwqqqq!", speaker: 1, face: 0, clothes: 0, action: 0},
+        {sentence: "qaqsdfjgsjkfgsdjgssjdfgsjdfgsjdfgsjfgjsfgsjdfgsdjfgsdjhfgsjfgsjhfdgsjdhfgjfgsdjfgsdfjgqqq!", speaker: 0, face: "02", clothes: "02", action: "02"},
     ],
     [
         {sentence: "fksdbfsmdf", speaker: 0, face: "01", clothes: "02", action: "01"},
