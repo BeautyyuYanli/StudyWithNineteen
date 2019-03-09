@@ -223,6 +223,7 @@ body{
 #mainBoardButtons{
     text-align: center;
     margin: 50px 0;
+    user-select: none;
 }
 #playButton{
     height: 50px;
@@ -247,6 +248,7 @@ body{
     height: 550px;
     bottom: -20px;
     left: 45px;
+    user-select: none;
 }
 #showFace, #showFaceBack{
     position: absolute;

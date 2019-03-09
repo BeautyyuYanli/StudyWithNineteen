@@ -8,15 +8,15 @@ function eventBoardCreate(_num){
     }
     eventIndex = _num - 1;
     sentenceCnt = 0;
-    saidElement.fadeOut(200);
     speakerElement.html("");
     speakerWordElement.html("");
     eventElement.fadeIn(200);
+    $("#showSaid").fadeOut(200);
     sentenceCnt = -1;
     nextSentence();
 }
 function eventBoardDelete(){
-    saidElement.fadeIn(200);
+    $("#showSaid").fadeIn(200);
     eventElement.fadeOut(200);
     mainBoardCreate();
 }
