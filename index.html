@@ -20,7 +20,7 @@
                 <div id="showHandle" class="win3rd">
                     <div id="exitGame" class="buttons" onclick="exitGame()"><img src="./pics/icons/baseline_arrow_back_white_48dp.png"></div>
                     <input id="inputWord" onkeydown="submitEvent(event)">
-                    <div id="checkAnswer" class="buttons" onclick="submitWord(inputElement.value);inputElement.value='';"><img src="./pics/icons/baseline_check_white_48dp.png"></div>
+                    <div id="checkAnswer" class="buttons" onclick="submitWord(inputElement.value);inputElement.value='';inputElement.focus()"><img src="./pics/icons/baseline_check_white_48dp.png"></div>
                 </div>
             </div>
             <div id="gameOver" class="win2nd" hidden>
@@ -77,10 +77,10 @@
             <p id="speaker">a</p>
             <p id="speakWords">a</p>
         </div>
-        <div id="showSaid"></div>
+        <div id="showSaid"><div></div></div>
         <div id="showKamome" class="Kamome">
-            <img id="showFace">
-            <img id="showBody">
+            <img id="showFace" onclick="touched(1)">
+            <img id="showBody" onclick="touched(0)">
         </div>
         <div id="showKamomeBack" class="Kamome" hidden>
             <img id="showFaceBack">

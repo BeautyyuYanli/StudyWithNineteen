@@ -35,7 +35,7 @@ function showScore(_num){
     }
     else{
         evaluation = "啊!错过了!";
-        changeKamome(clothesId, "01", "12");
+        changeKamome(clothesId, "01", "07");
     }
     changeSaid("倒计时 -" + cntAlarm + "s<br>总分: " + (score - onceScore) + " and " + onceScore + "<br>" + evaluation);
 }

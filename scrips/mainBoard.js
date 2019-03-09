@@ -1,4 +1,4 @@
-var historyScore = 0, lastScore = 0, exValue = 0, level;
+var historyScore = 0, lastScore = 0, exValue = 0, level, inMainBoard;
 function Base64Encode(str, encoding = 'utf-8') {
     var bytes = new (TextEncoder || TextEncoderLite)(encoding).encode(str);        
     return base64js.fromByteArray(bytes);
@@ -50,7 +50,9 @@ function mainBoardCreate(_num = lastScore){
     changeSaid("");
     //  show main board
     $("#mainBoard").fadeIn(200);
+    inMainBoard = true;
 }
 function mainBoardDelete(){
     $("#mainBoard").fadeOut(200);
+    inMainBoard = false;
 }
