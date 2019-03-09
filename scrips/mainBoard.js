@@ -32,6 +32,7 @@ function showHelp(){
 function mainBoardCreate(_num = lastScore){
     // update level
     level = Math.floor(exValue / 1000) + 1;
+    level = Math.min(level, 6);
     $("#showLevel .primaryWord").html(level);
     $("#showTotleEx .primaryWord").html(exValue + '/' + level * 1000);
     $("#eventIcons").empty();

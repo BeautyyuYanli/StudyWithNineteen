@@ -4,6 +4,11 @@
 p{
     user-select: none;
 }
+.icons{
+    height: 1.5em;
+    width: 1.5em;
+    vertical-align: middle;
+}
 body{
     overflow: hidden;
     margin: 0;
@@ -57,7 +62,7 @@ body{
     user-select: none;
     border-radius: 50px;
     text-align: center;
-    font-size: 23px;
+    font-size: 21px;
     color: #ffffff;
     box-shadow: 0 0 9px 1px #424242b0;
     cursor: default;
@@ -65,6 +70,10 @@ body{
     text-overflow: ellipsis;
     transition: all;
     transition-duration: 0.5s;
+}
+.buttons div{
+    display: inline-block;
+    vertical-align: middle;
 }
 .buttons:hover{
     box-shadow: 0 0 16px 0px #424242b0;
@@ -98,11 +107,12 @@ body{
 }
 .words{
     position: absolute;
-    background-color: #00443d;
+    background-color: #0095a8;
     color: #ffffff;
-    padding: 7px;
+    padding: 6px 12px;
     border-radius: 20px;
     font-size: 20px;
+    box-shadow: 0 0 10px 0 #0000004d;
 }
 #gameOver{
     top: 100px;
@@ -188,16 +198,16 @@ body{
 }
 #playButton{
     height: 50px;
-    width: 150px;
-    line-height: 50px;
+    width: 170px;
+    line-height: 46px;
 }
 #playButton:hover{
-    width: 200px;
+    width: 210px;
 }
 #helpButton, #importButton{
     height: 50px;
     width: 50px;
-    line-height: 50px;
+    line-height: 46px;
 }
 #helpButton:hover, #importButton:hover{
     width: 120px;
@@ -284,5 +294,7 @@ body{
     margin: 0;
     color: #000000b3;
     font-size: 27px;
-    line-height: 1.5em;
+    line-height: 1.3em;
+    width: 695px;
+    word-wrap: break-word;
 }
