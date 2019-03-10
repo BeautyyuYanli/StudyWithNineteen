@@ -285,13 +285,12 @@ body{
     border-radius: 10px;
     height: 1.75em;
     margin: 0 1em;
+    outline-style: none;
     transition: all;
     transition-duration: 0.5s;
 }
 #showSaid button:hover{
-    border: solid;
-    border-width: 1px;
-    border-color: #000000; 
+    box-shadow: 0 0 9px 1px #424242b0;
 }
 .Kamome{
     position: absolute;

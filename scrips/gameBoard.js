@@ -66,6 +66,7 @@ function returnButton(){
         mainBoardCreate(score);
 }
 function exitGame(){
-    score = 0;
+    if (alarm > 1000)
+        score = 0;
     gameOver();
 }

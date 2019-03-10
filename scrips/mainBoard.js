@@ -9,7 +9,7 @@ function Base64Decode(str, encoding = 'utf-8') {
 }
 function playButton(hardMode = 0){
     mainBoardDelete();
-    gameBoardCreate(3 + level / 3, 8 - level / 2, hardMode);
+    gameBoardCreate(3 + level / 3, 9 - level / 2, hardMode);
 }
 function _import(){
     let code = document.getElementById("importCode").value;
