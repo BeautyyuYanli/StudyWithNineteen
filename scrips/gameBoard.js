@@ -55,12 +55,15 @@ function gameBoardCreate(maxWords, dieTime, hardMode){
 function gameBoardDelete(){
     gameBoard.fadeOut(200);
     exValue += score;
+    if (ifHardMode)
+        exValue += score;
 }
 function returnButton(){
     // if...
     gameBoardDelete();
     if (Math.floor((exValue - score) / 1000) - Math.floor((exValue) / 1000) < 0){
-        eventBoardCreate(Math.floor((exValue) / 1000) + 1);
+        eventBoardCreate(Math.floor(exValue / 1000) + 1);
+        lastScore = score;
     }
     else
         mainBoardCreate(score);

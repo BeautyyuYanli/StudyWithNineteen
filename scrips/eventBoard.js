@@ -1,11 +1,11 @@
 var sentenceCnt, eventIndex, eventElement = $("#showEvent"), speakerWordElement = $("#speakWords"), speakerElement = $("#speaker");
 function eventBoardCreate(_num){
-    $("#backgroundBoard").css("background-image",'url("../pics/backgrounds/" + _num + ".png")');
     mainBoardDelete();
     if (_num > events.length){
         mainBoardCreate();
         return ;
     }
+    $("#backgroundBoard").css("background-image", "url('./pics/backgrounds/" + _num + ".jpg')");
     eventIndex = _num - 1;
     sentenceCnt = 0;
     speakerElement.html("");

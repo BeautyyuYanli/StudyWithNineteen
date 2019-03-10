@@ -20,6 +20,7 @@ body{
     background-image: url("../pics/backgrounds/1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     position: relative;
     height: 695px;
     width: 1080px;
@@ -27,6 +28,8 @@ body{
     margin: auto;
     border-radius: 7px;
     box-shadow:0 0 20px 4px #0000004d;
+    transition: all;
+    transition-duration: 0.5s;
 }
 .win1st{
     position: absolute;
@@ -88,6 +91,7 @@ body{
 /* gameBoard */
 #coreGame{
     height: 650px;
+    opacity: 0.9;
 }
 #gameArea{
     height: 460px;
@@ -169,7 +173,7 @@ body{
 #mainBoard{
     height: 650px;
     background-image: url("../pics/backgrounds/front.png");
-    background-size: 1px 57%;
+    background-size: 1px 362px;
     background-repeat: repeat-x;
 }
 #front{

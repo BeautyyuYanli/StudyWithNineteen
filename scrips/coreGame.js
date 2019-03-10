@@ -99,7 +99,5 @@ function gameOver(){
     for (let i in words){
         words[i].delete();
     }
-    if (ifHardMode)
-        score *= 2;
     showGameOver();
 }
