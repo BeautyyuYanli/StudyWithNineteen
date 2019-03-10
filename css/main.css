@@ -17,7 +17,9 @@ body{
     background-color: #F5F5F6;
 }
 #backgroundBoard{
-    background-image: url("../pics/backgrounds/1.png");
+    background-image: url("../pics/backgrounds/1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
     position: relative;
     height: 695px;
     width: 1080px;
