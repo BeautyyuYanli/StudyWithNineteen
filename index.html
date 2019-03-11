@@ -13,79 +13,82 @@
     <script>if (window.module) module = window.module;</script>
 </head>
 <body>
-    <div id="backgroundBoard">
-        <div id="coreGame" class="win1st" hidden>
-            <div id="gameArea" class="win2nd"></div>
-            <div id="inputArea" class="win2nd">
-                <div id="showTrans" class="win3rd"></div>
-                <div id="showHandle" class="win3rd">
-                    <div id="exitGame" class="buttons" onclick="exitGame(1)"><img src="./pics/icons/baseline_arrow_back_white_48dp.png"></div>
-                    <input id="inputWord" onkeydown="submitEvent(event)">
-                    <div id="checkAnswer" class="buttons" onclick="submitWord(inputElement.value);inputElement.value='';inputElement.focus()"><img src="./pics/icons/baseline_check_white_48dp.png"></div>
+    <div id="wholePage">
+        <div id="backgroundBoard">
+            <div id="coreGame" class="win1st" hidden>
+                <p>使用回车键提交答案</p>
+                <div id="gameArea" class="win2nd"></div>
+                <div id="inputArea" class="win2nd">
+                    <div id="showTrans" class="win3rd"></div>
+                    <div id="showHandle" class="win3rd">
+                        <div id="exitGame" class="buttons" onclick="exitGame(1)"><img src="./pics/icons/baseline_arrow_back_white_48dp.png"></div>
+                        <input id="inputWord" onkeydown="submitEvent(event)">
+                        <div id="checkAnswer" class="buttons" onclick="submitWord(inputElement.value);inputElement.value='';inputElement.focus()"><img src="./pics/icons/baseline_check_white_48dp.png"></div>
+                    </div>
+                </div>
+                <div id="gameOver" class="win2nd" hidden>
+                    <div id="overTitle" class="win3rd">Game Over!</div>
+                    <div id="showScore" class="win3rd"></div>
+                    <div id="returnButton" class="buttons" onclick="returnButton()">返回主页</div>
                 </div>
             </div>
-            <div id="gameOver" class="win2nd" hidden>
-                <div id="overTitle" class="win3rd">Game Over!</div>
-                <div id="showScore" class="win3rd"></div>
-                <div id="returnButton" class="buttons" onclick="returnButton()">返回主页</div>
-            </div>
-        </div>
-        <div id="mainBoard" class="win1st" hidden>
-            <div id="front">
-                <div id="showLevel" class="_win3rd">
-                    <p class="secondaryWord colorDark">等级Level:</p>
-                    <p class="primaryWord colorDark"></p>
-                </div>
-                <div id="showTotleEx" class="_win3rd">
-                    <p class="secondaryWord colorDark">熟练度Ex:</p>
-                    <p class="primaryWord colorDark"></p>
-                </div>
-                <div id="showUnlockedEvents" class="_win3rd">
-                    <p class='secondaryWord colorDark'>已解锁的剧情事件:</p>
-                    <div id="eventIcons"></div>
-                </div>
-                <div id="mainBoardButtons">
-                    <div id="hardModeButton" class="buttons" onclick="playButton(1)">
-                        <img src="./pics/icons/baseline_gamepad_white_48dp.png" class="icons">
-                        <div>挑战!</div>
+            <div id="mainBoard" class="win1st" hidden>
+                <div id="front">
+                    <div id="showLevel" class="_win3rd">
+                        <p class="secondaryWord colorDark">等级Level:</p>
+                        <p class="primaryWord colorDark"></p>
                     </div>
-                    <div id="playButton" class="buttons" onclick="playButton()">
-                        <img src="./pics/icons/baseline_send_white_48dp.png" class="icons">
-                        <div>开始游戏!</div>
+                    <div id="showTotleEx" class="_win3rd">
+                        <p class="secondaryWord colorDark">熟练度Ex:</p>
+                        <p class="primaryWord colorDark"></p>
                     </div>
-                    <div id="helpButton" class="buttons" onclick="showHelp()">
-                        <img src="./pics/icons/baseline_help_white_48dp.png" class="icons">
-                        <div>说明!</div>
+                    <div id="showUnlockedEvents" class="_win3rd">
+                        <p class='secondaryWord colorDark'>已解锁的剧情事件:</p>
+                        <div id="eventIcons"></div>
                     </div>
-                    <div id="importButton" class="buttons" onclick="showImport()">
-                        <img src="./pics/icons/baseline_save_white_48dp.png" class="icons">
-                        <div>
-                            存档!
+                    <div id="mainBoardButtons">
+                        <div id="hardModeButton" class="buttons" onclick="playButton(1)">
+                            <img src="./pics/icons/baseline_gamepad_white_48dp.png" class="icons">
+                            <div>挑战!</div>
+                        </div>
+                        <div id="playButton" class="buttons" onclick="playButton()">
+                            <img src="./pics/icons/baseline_send_white_48dp.png" class="icons">
+                            <div>开始游戏!</div>
+                        </div>
+                        <div id="helpButton" class="buttons" onclick="showHelp()">
+                            <img src="./pics/icons/baseline_help_white_48dp.png" class="icons">
+                            <div>说明!</div>
+                        </div>
+                        <div id="importButton" class="buttons" onclick="showImport()">
+                            <img src="./pics/icons/baseline_save_white_48dp.png" class="icons">
+                            <div>
+                                存档!
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div id="showLastScore" class="_win3rd">
-                    <p class="secondaryWord colorLight">上次游戏成绩:</p>
-                    <p class="primaryWord colorLight"></p>
-                </div>
-                <div id="showHistoryScore" class="_win3rd">
-                    <p class="secondaryWord colorLight">历史最高成绩:</p>
-                    <p class="primaryWord colorLight"></p>
+                    <div id="showLastScore" class="_win3rd">
+                        <p class="secondaryWord colorLight">上次游戏成绩:</p>
+                        <p class="primaryWord colorLight"></p>
+                    </div>
+                    <div id="showHistoryScore" class="_win3rd">
+                        <p class="secondaryWord colorLight">历史最高成绩:</p>
+                        <p class="primaryWord colorLight"></p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div id="showEvent" onclick="nextSentence()" hidden>
-            <p id="speaker">a</p>
-            <p id="speakWords">a</p>
-        </div>
-        <div id="showSaid"><div></div></div>
-        <div id="showKamome" class="Kamome">
-            <img id="showFace" onclick="touched(1)">
-            <img id="showBody" onclick="touched(0)">
-        </div>
-        <div id="showKamomeBack" class="Kamome" hidden>
-            <img id="showFaceBack">
-            <img id="showBodyBack">
+            <div id="showEvent" onclick="nextSentence()" hidden>
+                <p id="speaker">a</p>
+                <p id="speakWords">a</p>
+            </div>
+            <div id="showSaid"><div></div></div>
+            <div id="showKamome" class="Kamome">
+                <img id="showFace" onclick="touched(1)">
+                <img id="showBody" onclick="touched(0)">
+            </div>
+            <div id="showKamomeBack" class="Kamome" hidden>
+                <img id="showFaceBack">
+                <img id="showBodyBack">
+            </div>
         </div>
     </div>
     <script src="scrips/coreGame.js"></script>

@@ -50,6 +50,7 @@ function mainBoardCreate(_num = lastScore){
     changeSaid("");
     //  show main board
     $("#mainBoard").fadeIn(200);
+    $('#mainBoard').css("background-size", "1px " + ($('#mainBoardButtons')[0].offsetTop + $('#mainBoardButtons')[0].offsetHeight/2) + "px");
     inMainBoard = true;
 }
 function mainBoardDelete(){

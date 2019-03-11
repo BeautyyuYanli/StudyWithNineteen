@@ -51,4 +51,28 @@ var events = [
         {sentence: "sdkfhs", speaker: 0, face: "02", clothes: "02", action: "12"},
         {sentence: "qwqqqq!", speaker: 1, face: 0, clothes: 0, action: 0},
     ],
+    [
+        {sentence: "fksdbfsmdf", speaker: 0, face: "01", clothes: "02", action: "01"},
+        {sentence: "faqqqq!", speaker: 1, face: 0, clothes: 0, action: 0},
+        {sentence: "sdkfhs", speaker: 0, face: "02", clothes: "02", action: "12"},
+        {sentence: "qwqqqq!", speaker: 1, face: 0, clothes: 0, action: 0},
+    ],
+    [
+        {sentence: "fksdbfsmdf", speaker: 0, face: "01", clothes: "02", action: "01"},
+        {sentence: "faqqqq!", speaker: 1, face: 0, clothes: 0, action: 0},
+        {sentence: "sdkfhs", speaker: 0, face: "02", clothes: "02", action: "12"},
+        {sentence: "qwqqqq!", speaker: 1, face: 0, clothes: 0, action: 0},
+    ],
+    [
+        {sentence: "fksdbfsmdf", speaker: 0, face: "01", clothes: "02", action: "01"},
+        {sentence: "faqqqq!", speaker: 1, face: 0, clothes: 0, action: 0},
+        {sentence: "sdkfhs", speaker: 0, face: "02", clothes: "02", action: "12"},
+        {sentence: "qwqqqq!", speaker: 1, face: 0, clothes: 0, action: 0},
+    ],
+    [
+        {sentence: "fksdbfsmdf", speaker: 0, face: "01", clothes: "02", action: "01"},
+        {sentence: "faqqqq!", speaker: 1, face: 0, clothes: 0, action: 0},
+        {sentence: "sdkfhs", speaker: 0, face: "02", clothes: "02", action: "12"},
+        {sentence: "qwqqqq!", speaker: 1, face: 0, clothes: 0, action: 0},
+    ],
 ];

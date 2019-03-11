@@ -16,7 +16,16 @@ body{
     width: 100%;
     background-color: #F5F5F6;
 }
+#wholePage{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 #backgroundBoard{
+    display: inline-block;
     background-image: url("../pics/backgrounds/1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -92,6 +101,13 @@ body{
 #coreGame{
     height: 650px;
     opacity: 0.9;
+}
+#coreGame>p{
+    position: absolute;
+    top: 0;
+    left: 224px;
+    font-size: 16px;
+    color: #0000009e;
 }
 #gameArea{
     height: 460px;
@@ -173,7 +189,6 @@ body{
 #mainBoard{
     height: 650px;
     background-image: url("../pics/backgrounds/front.png");
-    background-size: 1px 362px;
     background-repeat: repeat-x;
 }
 #front{
