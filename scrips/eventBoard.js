@@ -39,7 +39,7 @@ function nextSentence(){
 }
 var events = [
     [
-        {sentence: "faqqqq!", speaker: 0, face: "01", clothes: "02", action: "01"},
+        {sentence: "啊!...抱歉...", speaker: 0, face: "10", clothes: "02", action: "03"},
         {sentence: "faqqqq!", speaker: 1, face: 0, clothes: 0, action: 0},
         {sentence: "qaqqqq!", speaker: 0, face: "02", clothes: "02", action: "02"},
         {sentence: "qwqqqq!", speaker: 1, face: 0, clothes: 0, action: 0},
