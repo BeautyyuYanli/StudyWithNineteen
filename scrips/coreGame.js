@@ -56,8 +56,8 @@ function submitWord(_word){
     }
 }
 function missWord(){
-    score -= 40;
-    showScore(-40);
+    score -= 30;
+    showScore(-30);
 }
 function gameStart(maxWords, dieTime, hardMode){
     //initialization

@@ -26,10 +26,14 @@ function nextSentence(){
         return ;
     }
     speakerWordElement.html(events[eventIndex][sentenceCnt].sentence);
+    //show speaker
     if(events[eventIndex][sentenceCnt].speaker == 0)
         speakerElement.html("Kamome:");
-    else
+    else if (events[eventIndex][sentenceCnt].speaker == 1)
         speakerElement.html("我:");
+    else
+        speakerElement.html("");
+    //show Kamome
     if (events[eventIndex][sentenceCnt].speaker == 0){
         changeKamome(events[eventIndex][sentenceCnt].clothes, events[eventIndex][sentenceCnt].action, events[eventIndex][sentenceCnt].face);
     }
@@ -42,7 +46,7 @@ var events = [
         {sentence: "啊!...抱歉...", speaker: 0, face: "10", clothes: "02", action: "03"},
         {sentence: "faqqqq!", speaker: 1, face: 0, clothes: 0, action: 0},
         {sentence: "qaqqqq!", speaker: 0, face: "02", clothes: "02", action: "02"},
-        {sentence: "qwqqqq!", speaker: 1, face: 0, clothes: 0, action: 0},
+        {sentence: "qwqqqq!", speaker:-1, face: 0, clothes: 0, action: 0},
         {sentence: "qaqsdfjgsjkfgsdjgssjdfgsjdfgsjdfgsjfgjsfgsjdfgsdjfgsdjhfgsjfgsjhfdgsjdhfgjfgsdjfgsdfjgqqq!", speaker: 0, face: "02", clothes: "02", action: "02"},
     ],
     [
