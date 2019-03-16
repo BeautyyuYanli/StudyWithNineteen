@@ -3,8 +3,9 @@ var path = require('path')
 function createWindow () {
     let win = new BrowserWindow({ 
       width: 1080, 
-      height: 720,
+      height: 695,
       icon: path.join(__dirname, 'pics/favicon.png'),
+      autoHideMenuBar: true,
     })
     win.loadFile('index.html')
 }
