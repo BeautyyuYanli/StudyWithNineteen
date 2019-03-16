@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/BeautyYuYanli/StudyWithKamome/issues"
   },
-  "homepage": "https://github.com/BeautyYuYanli/StudyWithKamome#readme"
+  "homepage": "https://github.com/BeautyYuYanli/StudyWithKamome#readme",
+  "devDependencies": {
+    "electron": "^3.1.6"
+  }
 }
