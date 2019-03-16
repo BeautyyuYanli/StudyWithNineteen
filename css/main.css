@@ -347,8 +347,8 @@ body{
 #speakWords{
     margin: 0;
     color: #000000b3;
-    font-size: 27px;
-    line-height: 1.3em;
+    font-size: 23px;
+    line-height: 1.5em;
     width: 695px;
     word-wrap: break-word;
 }
