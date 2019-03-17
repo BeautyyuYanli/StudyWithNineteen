@@ -1,1 +1,6 @@
 ideas/
+node_modules/
+StudyWithKamome-win32-x64/
+StudyWithKamome-win32-arm64/
+package-lock.json
+bash.exe.stackdump
