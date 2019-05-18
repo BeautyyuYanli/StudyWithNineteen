@@ -97,6 +97,45 @@
     <script src="scrips/mainBoard.js"></script>
     <script src="scrips/showNineteen.js"></script>
     <script src="scrips/dictionary.js"></script>
-    <script>mainBoardCreate(0);console.log("控制台仅供演示使用")</script>
+    <script>
+        function preloadImg(list, imgs) {
+            var def = $.Deferred(),
+                len = list.length;
+            $(list).each(function (i, e) {
+                var img = new Image();
+                img.src = e;
+                if (img.complete) {
+                    imgs[i] = img;
+                    len--;
+                    if (len == 0) {
+                        def.resolve();
+                    }
+                } else {
+                    img.onload = (function (j) {
+                        return function () {
+                            imgs[j] = img
+                            len--;
+                            if (len == 0) {
+                                def.resolve();
+                            }
+                        };
+                    })(i);
+                    img.onerror = function () {
+                        len--;
+                        console.log('fail to load image');
+                    };
+                }
+            });
+            return def.promise();
+        }
+        let list = ['pics/favicon.png', 'pics/favicon.ico', 'pics/face/bs1_km_f11_08.png', 'pics/face/bs1_km_f11_03.png', 'pics/face/bs1_km_f03_07.png', 'pics/face/bs1_km_f11_15.png', 'pics/face/bs1_km_f03_02.png', 'pics/face/bs1_km_f01_17.png', 'pics/face/bs1_km_f02_17.png', 'pics/face/bs1_km_f01_03.png', 'pics/face/bs1_km_f03_04.png', 'pics/face/bs1_km_f11_09.png', 'pics/face/bs1_km_f01_02.png', 'pics/face/bs1_km_f01_05.png', 'pics/face/bs1_km_f01_14.png', 'pics/face/bs1_km_f11_13.png', 'pics/face/bs1_km_f03_08.png', 'pics/face/bs1_km_f01_15.png', 'pics/face/bs1_km_f01_01.png', 'pics/face/bs1_km_f01_10.png', 'pics/face/bs1_km_f03_19.png', 'pics/face/bs1_km_f01_19.png', 'pics/face/bs1_km_f02_09.png', 'pics/face/bs1_km_f03_17.png', 'pics/face/bs1_km_f02_04.png', 'pics/face/bs1_km_f03_09.png', 'pics/face/bs1_km_f01_07.png', 'pics/face/bs1_km_f11_16.png', 'pics/face/bs1_km_f11_05.png', 'pics/face/bs1_km_f11_10.png', 'pics/face/bs1_km_f03_10.png', 'pics/face/bs1_km_f11_02.png', 'pics/face/bs1_km_f11_07.png', 'pics/face/bs1_km_f03_12.png', 'pics/face/bs1_km_f01_13.png', 'pics/help/help2.jpg', 'pics/help/help1.jpg', 'pics/help/help5.jpg', 'pics/help/help4.jpg', 'pics/help/help3.jpg', 'pics/body/bs1_km010201.png', 'pics/body/bs1_km011101.png', 'pics/body/bs1_km031101.png', 'pics/body/bs1_km020201.png', 'pics/body/bs1_km041101.png', 'pics/body/bs1_km031201.png', 'pics/body/bs1_km021201.png', 'pics/body/bs1_km011201.png', 'pics/body/bs1_km040301.png', 'pics/body/bs1_km020301.png', 'pics/body/bs1_km011301.png', 'pics/body/bs1_km040101.png', 'pics/body/bs1_km010301.png', 'pics/body/note', 'pics/body/bs1_km020101.png', 'pics/body/bs1_km010101.png', 'pics/body/bs1_km031301.png', 'pics/body/bs1_km021101.png', 'pics/body/bs1_km021301.png', 'pics/body/bs1_km040201.png', 'pics/body/bs1_km030101.png', 'pics/body/bs1_km030301.png', 'pics/body/bs1_km041301.png', 'pics/body/bs1_km041201.png', 'pics/body/bs1_km030201.png', 'pics/icons/baseline_save_white_48dp.png', 'pics/icons/baseline_arrow_back_white_48dp.png', 'pics/icons/baseline_help_white_48dp.png', 'pics/icons/baseline_check_white_48dp.png', 'pics/icons/baseline_gamepad_white_48dp.png', 'pics/icons/baseline_send_white_48dp.png', 'pics/backgrounds/2.jpg', 'pics/backgrounds/5.jpg', 'pics/backgrounds/1.jpg', 'pics/backgrounds/6.jpg', 'pics/backgrounds/front.png', 'pics/backgrounds/4.jpg', 'pics/backgrounds/3.jpg'], imgs = [];
+        $.when(preloadImg(list, imgs)).done(
+            function () {
+                console.log('preloading over')
+            }
+        );
+        mainBoardCreate(0);
+        console.log("控制台仅供演示使用")
+    </script>
 </body>
 </html>
