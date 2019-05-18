@@ -28,17 +28,17 @@ function nextSentence(){
     speakerWordElement.html(events[eventIndex][sentenceCnt].sentence);
     //show speaker
     if(events[eventIndex][sentenceCnt].speaker == 0)
-        speakerElement.html("Kamome:");
+        speakerElement.html("时九:");
     else if (events[eventIndex][sentenceCnt].speaker == 1)
         speakerElement.html("我:");
     else
         speakerElement.html("");
-    //show Kamome
+    //show Nineteen
     if (events[eventIndex][sentenceCnt].speaker == 0){
-        changeKamome(events[eventIndex][sentenceCnt].clothes, events[eventIndex][sentenceCnt].action, events[eventIndex][sentenceCnt].face);
+        changeNineteen(events[eventIndex][sentenceCnt].clothes, events[eventIndex][sentenceCnt].action, events[eventIndex][sentenceCnt].face);
     }
     else{
-        $("#showKamome").fadeTo(200, 0.5);
+        $("#showNineteen").fadeTo(200, 0.5);
     }
 }
 var events = [
@@ -111,7 +111,7 @@ var events = [
             ", speaker: 1, clothes: "01", action: "03", face: "10"},
         {sentence: "(我稍稍有些失望, 原以为她会很惊讶呢.)\
             ", speaker: -1, clothes: "01", action: "03", face: "10"},
-        {sentence: "昨天还没有自我介绍过呢. 我是高二(20)班的Kamome, 你呢?\
+        {sentence: "昨天还没有自我介绍过呢. 我是高二(20)班的时九, 你呢?\
             ", speaker: 0, clothes: "01", action: "01", face: "03"},
         {sentence: "(我同样以自我介绍回应)\
             ", speaker: -1, clothes: "01", action: "03", face: "10"},
@@ -275,7 +275,7 @@ var events = [
             ", speaker: -1, clothes: "01", action: "03", face: "10"},
         {sentence: "嘿! 想什么呢\
             ", speaker: 0, clothes: "01", action: "12", face: "02"},
-        {sentence: "(校服装束的Kamome突然出现的我的身边. 总怀疑她是不是会什么空间移动的魔法.)\
+        {sentence: "(校服装束的时九突然出现的我的身边. 总怀疑她是不是会什么空间移动的魔法.)\
             ", speaker: -1, clothes: "01", action: "03", face: "10"},
         {sentence: "当然是为了期末考感到悲伤且产生了求死不能的伤感...真羡慕你这样成绩优异的学子啊...\
             ", speaker: 1, clothes: "01", action: "03", face: "10"},

@@ -23,19 +23,19 @@ function showScore(_num){
     onceScore = _num;
     if (onceScore >= 70){
         evaluation = "很好呦!";
-        changeKamome(clothesId, "03", "02");
+        changeNineteen(clothesId, "03", "02");
     }
     else if (onceScore >= 40){
         evaluation = "不错嘛!";
-        changeKamome(clothesId, "03", "04");
+        changeNineteen(clothesId, "03", "04");
     }
     else if (onceScore >= 0){
         evaluation = "还行...";
-        changeKamome(clothesId, "01", "13");
+        changeNineteen(clothesId, "01", "13");
     }
     else{
         evaluation = "啊!错过了!";
-        changeKamome(clothesId, "01", "07");
+        changeNineteen(clothesId, "01", "07");
     }
     changeSaid("倒计时 -" + cntAlarm + "s<br>总分: " + (score - onceScore) + " and " + onceScore + "<br>" + evaluation);
 }

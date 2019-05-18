@@ -46,7 +46,7 @@ function mainBoardCreate(_num = lastScore){
     $("#showHistoryScore .primaryWord").html(historyScore);
     $("#showLastScore .primaryWord").html(lastScore);
     // show Kamemo
-    changeKamome(clothesId, "01", "01");
+    changeNineteen(clothesId, "01", "01");
     changeSaid("");
     //  show main board
     $("#mainBoard").fadeIn(200);

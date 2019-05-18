@@ -262,7 +262,7 @@ body{
 #helpButton:hover, #importButton:hover, #hardModeButton:hover{
     width: 120px;
 }
-/* show Kamome */
+/* show Nineteen */
 #showBody, #showBodyBack{
     position: absolute;
     z-index: 998;
@@ -313,7 +313,7 @@ body{
 #showSaid button:hover{
     box-shadow: 0 0 9px 1px #424242b0;
 }
-.Kamome{
+.Nineteen{
     position: absolute;
     height: 650px;
     width: 400px;

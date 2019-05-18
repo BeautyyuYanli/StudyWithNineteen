@@ -1,5 +1,5 @@
 {
-  "name": "studywithkamome",
+  "name": "studywithnineteen",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BeautyYuYanli/StudyWithKamome.git"
+    "url": "git+https://github.com/BeautyYuYanli/StudyWithNineteen.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/BeautyYuYanli/StudyWithKamome/issues"
+    "url": "https://github.com/BeautyYuYanli/StudyWithNineteen/issues"
   },
-  "homepage": "https://github.com/BeautyYuYanli/StudyWithKamome#readme",
+  "homepage": "https://github.com/BeautyYuYanli/StudyWithNineteen#readme",
   "devDependencies": {
     "electron": "^3.1.6"
   }

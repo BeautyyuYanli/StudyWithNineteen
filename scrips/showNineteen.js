@@ -1,15 +1,15 @@
 var faceId, actionId, clothesId = "01", said, sentence;
 var saidElement = $("#showSaid>div"), sentenceElement;
-function changeKamome(al = clothesId, be = "01", ge = "01"){//clothes action face
+function changeNineteen(al = clothesId, be = "01", ge = "01"){//clothes action face
     changeBody($("#showBodyBack"), al, be);
     changeFace($("#showFaceBack"), be, ge);
-    $("#showKamome").fadeOut(300);
-    $("#showKamomeBack").fadeTo(300, 1);
+    $("#showNineteen").fadeOut(300);
+    $("#showNineteenBack").fadeTo(300, 1);
     setTimeout(()=>{
     changeBody($("#showBody"), al, be);
     changeFace($("#showFace"), be, ge);
-        $("#showKamome").fadeTo(0, 1);
-        $("#showKamomeBack").fadeOut(0);
+        $("#showNineteen").fadeTo(0, 1);
+        $("#showNineteenBack").fadeOut(0);
     }, 350);
 }
 function changeBody(bodyElement, _clothes, _action){
@@ -43,16 +43,16 @@ function touched(alpha){
     if(alpha == 1){
         randAction = Math.floor(Math.random() * 100) % touchedFaceAction.length;
         changeSaid(touchedFaceAction[randAction].said);
-        changeKamome(clothesId, touchedFaceAction[randAction].action, touchedFaceAction[randAction].face);
+        changeNineteen(clothesId, touchedFaceAction[randAction].action, touchedFaceAction[randAction].face);
     }
     else{
         randAction = Math.floor(Math.random() * 100) % touchedBodyAction.length;
         changeSaid(touchedBodyAction[randAction].said);
-        changeKamome(clothesId, touchedBodyAction[randAction].action, touchedBodyAction[randAction].face);
+        changeNineteen(clothesId, touchedBodyAction[randAction].action, touchedBodyAction[randAction].face);
     }
     resetAction = setTimeout(()=>{
         changeSaid("");
-        changeKamome(clothesId, "01", "01");
+        changeNineteen(clothesId, "01", "01");
     }, 2000);
 }
 var touchedFaceAction = [
