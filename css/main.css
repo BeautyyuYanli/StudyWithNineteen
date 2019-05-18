@@ -24,6 +24,13 @@ body{
     justify-content: center;
     align-items: center;
 }
+#preloadCover{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    z-index: 999999;
+}
 #backgroundBoard{
     display: inline-block;
     background-image: url("../pics/backgrounds/1.jpg");
