@@ -13,7 +13,6 @@ function eventBoardCreate(_num){
     $("#showSaid").fadeOut(200);
     sentenceCnt = -1;
     nextSentence();
-    nextSentence();
 }
 function eventBoardDelete(){
     $("#showSaid").fadeIn(200);
@@ -43,7 +42,6 @@ function nextSentence(){
 }
 var events = [
     [
-        {sentence: "", speaker: 0, clothes: "02", action: "01", face: "01"},
         {sentence: "(尽管是早上, 不过天色却稍显昏暗, 毕竟是阴雨天气, 霏霏霪雨已经连续下了一周了)\
             ", speaker: -1, clothes: "02", action: "01", face: "01"},
         {sentence: "真不愧是南方的春天啊\
@@ -86,7 +84,6 @@ var events = [
             ", speaker: -1, clothes: "02", action: "03", face: "10"},
     ],
     [
-        {sentence: "", speaker: 0, clothes: "01", action: "01", face: "01"},
         {sentence: "(傍晚, 操场. 昨天下过的雨将空气洗刷一新, 草坪上略湿的叶片散发出春日的暖香)\
             ", speaker: -1, clothes: "01", action: "03", face: "10"},
         {sentence: "(晚饭后, 我和往常一样在操场散步. 其实还抱着一点私心, 想着说不定还会再遇到昨天那个少女)\
@@ -131,7 +128,6 @@ var events = [
             ", speaker: -1, clothes: "01", action: "03", face: "10"},
     ],
     [   
-        {sentence: "", speaker: 0, clothes: "04", action: "01", face: "01"},
         {sentence: "(我们置身于四周漆黑的环境中. 这是正要上演歌剧Starlight的剧院里. 忽然, 两束强光点亮了舞台, 集中在中央的两人身上)\
             ", speaker: -1, clothes: "04", action: "03", face: "10"},
         {sentence: "啊! 开始了!\
@@ -200,7 +196,6 @@ var events = [
             ", speaker: 0, clothes: "04", action: "13", face: "03"},
     ],
     [
-        {sentence: "", speaker: 0, clothes: "03", action: "01", face: "01"},
         {sentence: "(我们绕过一个转角, 转进一条不宽也不太窄的巷子里. 可以看到只有两三个人在走动, 都是学生装扮. 午后的阳光下显得十分安静.)\
             ", speaker: -1, clothes: "03", action: "03", face: "10"},
         {sentence: "登登登...登! 就是这里啦!\
@@ -233,7 +228,6 @@ var events = [
             ", speaker: 0, clothes: "03", action: "13", face: "03"},
     ],
     [
-        {sentence: "", speaker: 0, clothes: "02", action: "01", face: "01"},
         {sentence: "(下午, 天台. 午后扬起的大风卷起了尘埃, 不知做何用处的亭子顶上开着大号的圆形天窗, 中间投下了明媚的阳光)\
             ", speaker: -1, clothes: "02", action: "03", face: "10"},
         {sentence: "天台风好大, 我好冷.\
@@ -268,7 +262,6 @@ var events = [
             ", speaker: 0, clothes: "02", action: "01", face: "07"},
     ],
     [
-        {sentence: "", speaker: 0, clothes: "01", action: "01", face: "01"},
         {sentence: "(这是个风和日丽的好天气. 可惜这并不能让人的心情好起来, 就如同它不能让成绩凭空多出30分一样. 我在前往学校的路上胡思乱想着)\
             ", speaker: -1, clothes: "01", action: "03", face: "10"},
         {sentence: "(忽然, 一阵风划到我的脸上, 让人感到有些痒)\
