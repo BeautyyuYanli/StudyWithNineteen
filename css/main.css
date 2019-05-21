@@ -33,6 +33,7 @@ body{
 }
 #backgroundBoard{
     display: inline-block;
+    overflow: hidden;
     background-image: url("../pics/backgrounds/1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -270,17 +271,26 @@ body{
     width: 120px;
 }
 /* show Nineteen */
-#showBody, #showBodyBack{
-    position: absolute;
-    z-index: 998;
-    height: 550px;
-    bottom: -20px;
-    left: 45px;
-    user-select: none;
-}
-#showFace, #showFaceBack{
+#clickFace{
     position: absolute;
     z-index: 999;
+    left: 110px;
+    top: 120px;
+    height: 150px;
+    width: 200px;
+    user-select: none;
+}
+#showBody, #showBodyBack{
+    z-index: 997;
+}
+#showFace, #showFaceBack{
+    z-index: 998;
+}
+#showBody, #showBodyBack, #showFace, #showFaceBack{
+    position: absolute;
+    left: -10px;
+    height: 660px;
+    bottom: -90px;
     user-select: none;
 }
 #showSaid{

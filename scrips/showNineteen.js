@@ -13,22 +13,24 @@ function changeNineteen(al = clothesId, be = "01", ge = "01"){//clothes action f
     }, 350);
 }
 function changeBody(bodyElement, _clothes, _action){
-    bodyElement.attr("src", "./pics/body/bs1_km" + (clothesId = _clothes) + (actionId = _action) + "01.png");
+    bodyElement.attr("src", "./pics/body/" + (clothesId = _clothes) + (actionId = _action) + ".png");
 }
 function changeFace(faceElement, _action, _face){
     if (_action == "12" || _action == "13")
         _action = "11";
-    if (_action == "11"){
-        faceElement.css("left", "109px");
-        faceElement.css("top", "165px");
-        faceElement.css("height", "92px");
-    }
-    else{
-        faceElement.css("left", "160.5px");
-        faceElement.css("top", "161px");
-        faceElement.css("height", "94.5px");
-    }
-    faceElement.attr("src", "./pics/face/bs1_km_f" + _action + "_" + (faceId = _face) + ".png");
+    if (_action == "02" || _action == "03")
+        _action = "01";
+    // if (_action == "11"){
+        // faceElement.css("left", "109px");
+        // faceElement.css("top", "165px");
+        // faceElement.css("height", "92px");
+    // }
+    // else{
+        // faceElement.css("left", "160.5px");
+        // faceElement.css("top", "161px");
+        // faceElement.css("height", "94.5px");
+    // }
+    faceElement.attr("src", "./pics/face/" + _action + (faceId = _face) + ".png");
 }
 function changeSaid(_str){
     saidElement.html(said = _str);
@@ -65,7 +67,7 @@ var touchedBodyAction = [
     {said: "背单词的时候请认真些.", action: "02", face: "04"},
     {said: "嗯?有什么事吗?", action: "01", face: "03"},
     {said: "没有不高兴..只是有些饿了..", action: "03", face: "09"},
-    {said: "这周末也一起去图书馆吧?", action: "11", face: "08"},
+    {said: "这周末也一起去图书馆吧?", action: "11", face: "16"},
     {said: "呜..下周又该考试了..", action: "12", face: "07"},
     {said: "哼哼..这种难度的试卷实在是容易啊.", action: "13", face: "05"},
 ];
