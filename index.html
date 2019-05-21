@@ -14,7 +14,14 @@
 </head>
 <body>
     <div id="wholePage">
-        <div id="preloadCover"></div>
+        <div id="preloadCover">
+            <h1>和时九一起记单词!</h1>
+            <h2>Study With Nineteen</h2>
+            <p>加载中......</p>
+            <h3>程序&策划: Beautyyu @微笙无上计算机协会</h3>
+            <h3>立绘: 忆棠 @Stefanie漫研社</h3>
+            <h3>剧本: 言醴 @Stefanie漫研社</h3>
+        </div>
         <div id="backgroundBoard">
             <div id="coreGame" class="win1st" hidden>
                 <p>使用回车键提交答案</p>
@@ -134,7 +141,7 @@
         $.when(preloadImg(list, imgs)).done(
             function () {
                 console.log('preloading over');
-                setTimeout(()=>{$('#preloadCover').fadeOut(300)}, 0);
+                setTimeout(()=>{$('#preloadCover').fadeOut(300)}, 4000);
             }
         );
         mainBoardCreate(0);
