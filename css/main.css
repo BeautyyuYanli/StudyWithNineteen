@@ -300,6 +300,7 @@ body{
     height: 660px;
     bottom: -90px;
     user-select: none;
+    -webkit-user-drag: none;
 }
 #showSaid{
     position: absolute;
