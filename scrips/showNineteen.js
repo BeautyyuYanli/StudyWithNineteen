@@ -13,7 +13,7 @@ function changeNineteen(al = clothesId, be = "01", ge = "01"){//clothes action f
     }, 350);
 }
 function changeBody(bodyElement, _clothes, _action){
-    bodyElement.attr("src", "./pics/body/" + (clothesId = _clothes) + (actionId = _action) + ".png");
+    bodyElement.attr("src", "./pics/body/" + (clothesId = _clothes) + (actionId = _action) + ".webp");
 }
 function changeFace(faceElement, _action, _face){
     if (_action == "12" || _action == "13")
@@ -30,7 +30,7 @@ function changeFace(faceElement, _action, _face){
         // faceElement.css("top", "161px");
         // faceElement.css("height", "94.5px");
     // }
-    faceElement.attr("src", "./pics/face/" + _action + (faceId = _face) + ".png");
+    faceElement.attr("src", "./pics/face/" + _action + (faceId = _face) + ".webp");
 }
 function changeSaid(_str){
     saidElement.html(said = _str);
