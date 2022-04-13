@@ -4,7 +4,7 @@
 
 `和时九一起记单词(StudyWithNineteen)`是由`Beautyyu`开发的益智游戏.由`忆棠`提供插画.
 
-[体验地址](http://beautyyu.top/StudyWithNineteen/)
+[体验地址](http://beautyyu.one/StudyWithNineteen/)
 
 (Ivan: 你又爱记单词了)
 
